@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <fragment
+        android:id="@+id/CameraFragment"
+        android:name="jp.co.mongolian.android.camerafragment.CameraFragment"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        tools:layout="@layout/fragment_camera" />
+    
+    <ImageView
+        android:id="@+id/PictureTaken"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/CameraFragment"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/black"/>
+    
+    <Button
+        android:id="@+id/TakePicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/PictureTaken"
+        android:layout_alignRight="@+id/CameraFragment"
+        android:layout_alignBottom="@+id/PictureTaken"
+        android:layout_alignTop="@+id/PictureTaken"
+        android:layout_marginLeft="20dp"
+        android:text="take picture"/>
+
+</RelativeLayout>
